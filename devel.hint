@@ -1,0 +1,8 @@
+category: Gnome
+requires: cygwin ORBit2-devel glib2-devel
+external-source: GConf2
+sdesc: "GNOME configuration database system (development)"
+ldesc: "GConf is a configuration database system, functionally similar to the
+Windows registry but lots better. It's being written for the GNOME
+desktop but does not require GNOME; configure should notice if GNOME
+is not installed and compile the basic GConf library anyway."
