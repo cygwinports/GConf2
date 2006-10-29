@@ -1,5 +1,5 @@
 category: Gnome
-requires: cygwin ORBit2 glib2 gtk2-x11 libopenldap2_2_7 libpopt0 libxml2 sysvinit
+requires: cygwin ORBit2 glib2 gtk2-x11 libopenldap2_2_7 libxml2 sysvinit
 sdesc: "GNOME configuration database system (runtime)"
 ldesc: "GConf is a configuration database system, functionally similar to the
 Windows registry but lots better. It's being written for the GNOME
