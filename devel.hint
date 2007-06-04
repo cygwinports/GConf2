@@ -1,5 +1,5 @@
 category: Gnome
-requires: cygwin ORBit2-devel glib2-devel
+requires: cygwin ORBit2-devel glib2-devel gettext
 external-source: GConf2
 sdesc: "GNOME configuration database system (development)"
 ldesc: "GConf is a configuration database system, functionally similar to the
