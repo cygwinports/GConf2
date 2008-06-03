@@ -1,0 +1,14 @@
+ORIG_PN=${PN/${PV_MAJ}/}
+
+inherit gnome2
+
+DESCRIPTION="GNOME configuration database system"
+
+CYGCONF_ARGS="--enable-gtk --libexecdir=/usr/lib/GConf"
+
+PKG_NAMES="${PN} ${PN}-devel"
+PKG_HINTS="setup devel"
+PKG_CONTENTS[0]="--exclude=aclocal --exclude=gtk-doc
+                 etc/gconf/ etc/preremove/ usr/bin/ usr/lib/GConf/ usr/share/"
+PKG_CONTENTS[1]="usr/include/ usr/lib/lib* usr/lib/pkgconfig/
+                 usr/share/aclocal/ usr/share/gtk-doc/"
