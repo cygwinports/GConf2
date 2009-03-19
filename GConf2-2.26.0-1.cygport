@@ -3,7 +3,6 @@ ORIG_PN=${PN/${PV_MAJ}/}
 inherit gnome2
 
 DESCRIPTION="GNOME configuration database system"
-PATCH_URI="2.22-xml-backend-export-symbols.patch"
 
 CYGCONF_ARGS="--enable-gtk --libexecdir=/usr/lib/GConf"
 
@@ -14,4 +13,4 @@ libgconf2_4_CONTENTS="etc/ usr/bin/cyggconf-2-4.dll usr/lib/GConf/
 libgconf2_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/
                           usr/share/aclocal/ usr/share/gtk-doc/"
 
-KEEPDIRS="/etc/gconf/gconf.xml.*"
+KEEPDIRS="/etc/gconf/gconf.xml.defaults /etc/gconf/gconf.xml.mandatory"

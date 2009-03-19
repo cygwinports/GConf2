@@ -1,5 +1,5 @@
 category: Gnome
-requires: cygwin libdbus-glib_1_2 libdbus1_3 libglib2.0_0 libintl8 libopenldap2_3_0 libORBit2_0 libxml2
+requires: cygwin libdbus-glib_1_2 libdbus1_3 libgcc1 libglib2.0_0 libintl8 libopenldap2_3_0 libORBit2_0 libxml2
 external-source: GConf2
 sdesc: "GNOME configuration database system (library)"
 ldesc: "GConf is a configuration database system, functionally similar to the
