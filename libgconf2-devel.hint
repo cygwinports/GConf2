@@ -1,5 +1,5 @@
 category: Gnome
-requires: libgconf2_4 libdbus-glib_1-devel libdbus1-devel libglib2.0-devel gettext libORBit2-devel
+requires: GConf2 libgconf2_4 libdbus-glib_1-devel libdbus1-devel libglib2.0-devel gettext libORBit2-devel
 external-source: GConf2
 sdesc: "GNOME configuration database system (development)"
 ldesc: "GConf is a configuration database system, functionally similar to the
