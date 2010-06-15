@@ -6,7 +6,7 @@ DESCRIPTION="GNOME configuration database system"
 
 PKG_NAMES="${PN} libgconf2_4 libgconf2-devel"
 GConf2_CONTENTS="usr/bin/*.exe usr/share/doc/ usr/share/man/ usr/share/sgml/"
-libgconf2_4_CONTENTS="etc/ usr/bin/cyggconf-2-4.dll usr/lib/GConf/
+libgconf2_4_CONTENTS="etc/gconf/ etc/preremove/ usr/bin/cyggconf-2-4.dll usr/lib/GConf/
                       usr/share/GConf/ usr/share/dbus-1/ usr/share/locale/"
 libgconf2_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/
                           usr/share/aclocal/ usr/share/gtk-doc/"
