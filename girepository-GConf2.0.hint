@@ -1,7 +1,7 @@
 category: Gnome
-requires: libdbus-glib_1_2 libdbus1_3 libglib2.0_0 libintl8 libopenldap2_3_0 libORBit2_0 libxml2
+requires: girepository-GLib2.0 libgconf2_4
 external-source: GConf2
-sdesc: "GNOME configuration database system (library)"
+sdesc: "GNOME configuration database system (GObject Introspection data)"
 ldesc: "GConf is a configuration database system, functionally similar to the
 Windows registry but lots better. It's being written for the GNOME
 desktop but does not require GNOME; configure should notice if GNOME

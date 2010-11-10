@@ -1,0 +1,18 @@
+--- origsrc/GConf-2.32.1/gconf/Makefile.am	2010-09-20 14:55:31.000000000 -0500
++++ src/GConf-2.32.1/gconf/Makefile.am	2010-11-10 10:21:25.756138600 -0600
+@@ -130,13 +130,13 @@ INTROSPECTION_COMPILER_ARGS= --includedi
+ if HAVE_INTROSPECTION
+ introspection_files =				\
+ 	$(gconfinclude_HEADERS)			\
+-	$(filter %.c,$(libgconf_2_la_SOURCES))
++	$(filter %.c,$(filter-out GConfX%,$(libgconf_2_la_SOURCES)))
+ GConf-2.0.gir: libgconf-2.la Makefile
+ GConf_2_0_gir_INCLUDES = GObject-2.0
+ GConf_2_0_gir_CFLAGS = \
+ 	$(INCLUDES)
+ GConf_2_0_gir_LIBS = libgconf-2.la
+-GConf_2_0_gir_FILES = $(addprefix $(srcdir)/, $(introspection_files))
++GConf_2_0_gir_FILES = $(addprefix $(srcdir)/, $(introspection_files)) $(CORBA_SOURCECODE)
+ GConf_2_0_gir_SCANNERFLAGS = --identifier-prefix=GConf --symbol-prefix=gconf
+ INTROSPECTION_GIRS += GConf-2.0.gir
+ 
