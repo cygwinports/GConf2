@@ -20,5 +20,5 @@ CYGCONF_ARGS="
 	--libexecdir=/usr/lib/GConf
 	--disable-defaults-service
 	--enable-gtk
-	--with-gtk=2.0
+	--with-gtk=3.0
 "
