@@ -1,10 +1,14 @@
-ORIG_PN=${PN/${PV_MAJ}/}
-
+ORIG_PN="GConf"
 inherit gnome2
 
 DESCRIPTION="GNOME configuration database system"
 
-PATCH_URI="2.32.1-introspection-vpath.patch"
+DEPEND="gnome-common gtk-doc
+	girepository(GLib-2.0)
+	pkgconfig(dbus-1)
+	pkgconfig(dbus-glib-1)
+	pkgconfig(glib-2.0)
+	pkgconfig(libxml-2.0)"
 
 PKG_NAMES="${PN} libgconf2_4 libgconf2-devel girepository-GConf2.0"
 GConf2_CONTENTS="--exclude=*.dll usr/bin/ usr/share/doc/ usr/share/man/ usr/share/sgml/"
@@ -19,6 +23,8 @@ KEEPDIRS="/etc/gconf/gconf.xml.defaults /etc/gconf/gconf.xml.mandatory"
 CYGCONF_ARGS="
 	--libexecdir=/usr/lib/GConf
 	--disable-defaults-service
+	--enable-gsettings-backend
 	--enable-gtk
+	--disable-orbit
 	--with-gtk=3.0
 "
