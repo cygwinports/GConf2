@@ -3,6 +3,12 @@ inherit gnome2
 
 DESCRIPTION="GNOME configuration database system"
 
+PATCH_URI="
+	http://git.gnome.org/browse/gconf/patch/configure.in?id=f62223d
+	http://git.gnome.org/browse/gconf/patch/gconf/gconf-dbus.c?id=3929961
+	http://git.gnome.org/browse/gconf/patch/gconf/gconfd.c?id=226de65
+"
+
 DEPEND="gnome-common gtk-doc
 	girepository(GLib-2.0)
 	pkgconfig(dbus-1)
