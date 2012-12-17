@@ -1,7 +1,14 @@
 ORIG_PN="GConf"
 inherit gnome2
 
-DESCRIPTION="GNOME configuration database system"
+NAME="GConf2"
+VERSION=3.2.5
+RELEASE=2
+CATEGORY="GNOME"
+SUMMARY="GNOME configuration database system"
+DESCRIPTION="GConf is a configuration database system, functionally similar to
+the Windows registry but lots better. It's being written for the GNOME desktop
+but does not require GNOME."
 
 PATCH_URI="
 	http://git.gnome.org/browse/gconf/patch/configure.in?id=f62223d
@@ -18,8 +25,9 @@ DEPEND="gnome-common gtk-doc
 
 PKG_NAMES="${PN} libgconf2_4 libgconf2-devel girepository-GConf2.0"
 GConf2_CONTENTS="--exclude=*.dll usr/bin/ usr/share/doc/ usr/share/man/ usr/share/sgml/"
+libgconf2_4_REQUIRES="gconf-desktop-schemas"
 libgconf2_4_CONTENTS="etc/ usr/bin/cyggconf-2-4.dll usr/lib/GConf/ usr/lib/gio/
-                      usr/share/GConf/ usr/share/dbus-1/ usr/share/locale/"
+                      usr/share/dbus-1/ usr/share/locale/"
 libgconf2_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/
                           usr/share/aclocal/ usr/share/gtk-doc/"
 girepository_GConf2_0_CONTENTS="usr/*/gir*/GConf-2.0.*"
@@ -33,4 +41,5 @@ CYGCONF_ARGS="
 	--enable-gtk
 	--disable-orbit
 	--with-gtk=3.0
+	--without-openldap
 "

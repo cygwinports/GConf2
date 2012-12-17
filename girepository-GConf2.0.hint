@@ -1,8 +1,0 @@
-category: Gnome
-requires: girepository-GLib2.0 libgconf2_4
-external-source: GConf2
-sdesc: "GNOME configuration database system (GObject Introspection data)"
-ldesc: "GConf is a configuration database system, functionally similar to the
-Windows registry but lots better. It's being written for the GNOME
-desktop but does not require GNOME; configure should notice if GNOME
-is not installed and compile the basic GConf library anyway."
