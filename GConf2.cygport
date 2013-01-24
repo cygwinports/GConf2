@@ -2,19 +2,13 @@ ORIG_PN="GConf"
 inherit gnome2
 
 NAME="GConf2"
-VERSION=3.2.5
-RELEASE=2
+VERSION=3.2.6
+RELEASE=1
 CATEGORY="GNOME"
 SUMMARY="GNOME configuration database system"
 DESCRIPTION="GConf is a configuration database system, functionally similar to
 the Windows registry but lots better. It's being written for the GNOME desktop
 but does not require GNOME."
-
-PATCH_URI="
-	http://git.gnome.org/browse/gconf/patch/configure.in?id=f62223d
-	http://git.gnome.org/browse/gconf/patch/gconf/gconf-dbus.c?id=3929961
-	http://git.gnome.org/browse/gconf/patch/gconf/gconfd.c?id=226de65
-"
 
 DEPEND="gnome-common gtk-doc
 	girepository(GLib-2.0)
@@ -40,6 +34,5 @@ CYGCONF_ARGS="
 	--enable-gsettings-backend
 	--enable-gtk
 	--disable-orbit
-	--with-gtk=3.0
 	--without-openldap
 "
