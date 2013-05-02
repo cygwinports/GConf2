@@ -32,7 +32,6 @@ CYGCONF_ARGS="
 	--libexecdir=/usr/lib/GConf
 	--disable-defaults-service
 	--enable-gsettings-backend
-	--enable-gtk
 	--disable-orbit
 	--without-openldap
 "
