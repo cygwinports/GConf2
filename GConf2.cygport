@@ -3,8 +3,8 @@ inherit gnome2
 
 NAME="GConf2"
 VERSION=3.2.6
-RELEASE=1
-CATEGORY="GNOME"
+RELEASE=2
+CATEGORY="Libs"
 SUMMARY="GNOME configuration database system"
 DESCRIPTION="GConf is a configuration database system, functionally similar to
 the Windows registry but lots better. It's being written for the GNOME desktop
@@ -17,10 +17,12 @@ DEPEND="gnome-common gtk-doc
 	pkgconfig(glib-2.0)
 	pkgconfig(libxml-2.0)"
 
-PKG_NAMES="${PN} libgconf2_4 libgconf2-devel girepository-GConf2.0"
-GConf2_CONTENTS="--exclude=*.dll usr/bin/ usr/share/doc/ usr/share/man/ usr/share/sgml/"
+PKG_NAMES="${NAME} libgconf2_4 libgconf2-devel girepository-GConf2.0"
+GConf2_CATEGORY="GNOME"
+GConf2_CONTENTS="--exclude=*.dll etc/xdg/ usr/bin/ usr/share/doc/ usr/share/man/ usr/share/sgml/"
 libgconf2_4_REQUIRES="gconf-desktop-schemas"
-libgconf2_4_CONTENTS="etc/ usr/bin/cyggconf-2-4.dll usr/lib/GConf/ usr/lib/gio/
+libgconf2_4_CONTENTS="etc/gconf/ etc/p* usr/bin/cyggconf-2-4.dll
+                      usr/lib/GConf/ usr/lib/gio/ usr/libexec/
                       usr/share/dbus-1/ usr/share/locale/"
 libgconf2_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/
                           usr/share/aclocal/ usr/share/gtk-doc/"
@@ -29,7 +31,6 @@ girepository_GConf2_0_CONTENTS="usr/*/gir*/GConf-2.0.*"
 KEEPDIRS="/etc/gconf/gconf.xml.defaults /etc/gconf/gconf.xml.mandatory"
 
 CYGCONF_ARGS="
-	--libexecdir=/usr/lib/GConf
 	--disable-defaults-service
 	--enable-gsettings-backend
 	--disable-orbit
